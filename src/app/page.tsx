@@ -27,7 +27,7 @@ export default function Home() {
                     Start For Free Today
                   </span>
                 </Button>
-                <h1 className="text-5xl md:text-8xl bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-600 font-sans font-bold">
+                <h1 className="text-5xl md:text-8xl bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-600 font-sans font-bold sm:my-[50px] ">
                   Automate Your Work With Fuzzie
                 </h1>
               </div>
