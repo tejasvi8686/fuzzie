@@ -54,6 +54,7 @@ const Navbar = async (props: Props) => {
           </span>
         </Link>
         {/* {user ? <UserButton afterSignOutUrl="/" /> : null} */}
+
         <MenuIcon className="md:hidden" />
       </aside>
     </header>

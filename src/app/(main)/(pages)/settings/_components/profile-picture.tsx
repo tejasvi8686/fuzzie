@@ -1,27 +1,26 @@
-
-'use client'
-import React from 'react'
-import UploadCareButton from "./uploadcare-button"
-import { useRouter } from 'next/navigation'
-import Image from 'next/image'
-import { Button } from '@/components/ui/button'
-import { X } from 'lucide-react'
+"use client";
+import React from "react";
+import UploadCareButton from "./uploadcare-button";
+import { useRouter } from "next/navigation";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { X } from "lucide-react";
 
 type Props = {
-  userImage: string | null
-  onDelete?: any
-  onUpload: any
-}
+  userImage: string | null;
+  onDelete?: any;
+  onUpload: any;
+};
 
 const ProfilePicture = ({ userImage, onDelete, onUpload }: Props) => {
-  const router = useRouter()
+  const router = useRouter();
 
   const onRemoveProfileImage = async () => {
-    const response = await onDelete()
+    const response = await onDelete();
     if (response) {
-      router.refresh()
+      router.refresh();
     }
-  }
+  };
 
   return (
     <div className="flex flex-col">
@@ -30,11 +29,7 @@ const ProfilePicture = ({ userImage, onDelete, onUpload }: Props) => {
         {userImage ? (
           <>
             <div className="relative h-full w-2/12">
-              <Image
-                src={userImage}
-                alt="User_Image"
-                fill
-              />
+              <Image src={userImage} alt="User_Image" fill />
             </div>
             <Button
               onClick={onRemoveProfileImage}
@@ -48,7 +43,7 @@ const ProfilePicture = ({ userImage, onDelete, onUpload }: Props) => {
         )}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ProfilePicture
+export default ProfilePicture;

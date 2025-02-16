@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@clerk/nextjs": "^6.11.1",
+    "@clerk/nextjs": "^6.11.3",
     "@hookform/resolvers": "^3.10.0",
     "@prisma/client": "^6.3.1",
     "@radix-ui/react-dropdown-menu": "^2.1.6",
@@ -21,7 +21,7 @@
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.8.1",
     "@uploadcare/blocks": "^0.50.4",
-    "@uploadcare/react-uploader": "^1.4.0",
+    "@uploadcare/react-uploader": "^1.5.0",
     "@uploadcare/upload-client": "^6.14.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
