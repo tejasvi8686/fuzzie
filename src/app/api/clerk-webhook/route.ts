@@ -10,7 +10,7 @@ export async function POST(req: Request) {
     const email = email_addresses[0]?.email_address;
     console.log("✅", body);
     await db.user.upsert({
-      where: { clerkId: id },
+      where: { clerkId: id }, 
       update: {
         email,
         name: first_name,
