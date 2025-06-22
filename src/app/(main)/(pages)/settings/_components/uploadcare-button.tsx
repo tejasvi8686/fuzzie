@@ -1,14 +1,16 @@
-"use client";
-import { useRef, useEffect } from "react";
-import * as LR from "@uploadcare/blocks"
-import { useRouter } from "next/navigation";
+'use client'
+import React, { useEffect, useRef } from 'react'
+import * as LR from '@uploadcare/blocks'
+import { useRouter } from 'next/navigation'
 
 type Props = {
   onUpload: (e: string) => any
 }
 
-const UploadcareButton = ({ onUpload }: Props) => {
-  const router = useRouter();
+LR.registerBlocks(LR)
+
+const UploadCareButton = ({ onUpload }: Props) => {
+  const router = useRouter()
   const ctxProviderRef = useRef<
     typeof LR.UploadCtxProvider.prototype & LR.UploadCtxProvider
   >(null)
@@ -20,9 +22,7 @@ const UploadcareButton = ({ onUpload }: Props) => {
         router.refresh()
       }
     }
-    if (ctxProviderRef.current) {
-      ctxProviderRef.current.addEventListener('file-upload-success', handleUpload)
-    }
+    ctxProviderRef.current?.addEventListener('file-upload-success', handleUpload)
   }, [])
 
   return (
@@ -32,7 +32,7 @@ const UploadcareButton = ({ onUpload }: Props) => {
         pubkey="a9428ff5ff90ae7a64eb"
       />
 
-      <lr-file-uploader-regular
+      <lr-file-uploader-regular 
         ctx-name="my-uploader"
         css-src={`https://cdn.jsdelivr.net/npm/@uploadcare/blocks@0.35.2/web/lr-file-uploader-regular.min.css`}
       />
@@ -45,4 +45,4 @@ const UploadcareButton = ({ onUpload }: Props) => {
   )
 }
 
-export default UploadcareButton;
+export default UploadCareButton
